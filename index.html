@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Xupu Mei — 摄影作品集</title>
+    <meta
+      name="description"
+      content="Xupu Mei 摄影作品集：用心看 / 被看见的人 / 孩童 / 在世界之中"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- 首页 -->
+      <section id="home-view" class="view" aria-hidden="true">
+        <img class="hero-image" src="./fengmian.jpg" alt="封面" />
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="hero-topline">Portfolio</div>
+          <h1 class="name">Xupu Mei</h1>
+          <div class="tagline">欢迎来到我的宇宙</div>
+          <button class="works-button" type="button" onclick="navigateTo('gallery-overview-view')">
+            WORKS
+          </button>
+        </div>
+      </section>
+
+      <!-- 作品集总览 -->
+      <section id="gallery-overview-view" class="view" aria-hidden="true">
+        <div class="overview-header">
+          <div class="overview-kicker">四个系列</div>
+          <h2 class="page-title">ABOUT MY WORK</h2>
+          <div class="overview-subtitle">
+            摄影是我的生命
+          </div>
+        </div>
+
+        <div class="gallery-grid" role="list">
+          <article class="gallery-item" role="listitem" data-series="to-see" tabindex="0">
+            <img alt="用心看 To See, With Care" />
+            <div class="series-name">
+              <div class="series-cn">用心看</div>
+              <div class="series-en">To See, With Care</div>
+            </div>
+          </article>
+
+          <article class="gallery-item" role="listitem" data-series="to-be-seen" tabindex="0">
+            <img alt="被看见的人 To Be Seen" />
+            <div class="series-name">
+              <div class="series-cn">被看见的人</div>
+              <div class="series-en">To Be Seen</div>
+            </div>
+          </article>
+
+          <article class="gallery-item" role="listitem" data-series="children" tabindex="0">
+            <img alt="孩童 Children, Everywhere" />
+            <div class="series-name">
+              <div class="series-cn">孩童</div>
+              <div class="series-en">Children, Everywhere</div>
+            </div>
+          </article>
+
+          <article class="gallery-item" role="listitem" data-series="being-in-the-world" tabindex="0">
+            <img alt="在世界之中 Being in the World" />
+            <div class="series-name">
+              <div class="series-cn">在世界之中</div>
+              <div class="series-en">Being in the World</div>
+            </div>
+          </article>
+        </div>
+
+        <button class="secondary-button" type="button" onclick="navigateTo('home-view')">
+          返回首页
+        </button>
+      </section>
+
+      <!-- Quote 过渡页 -->
+      <section id="quote-view" class="view" aria-hidden="true">
+        <div class="quote-backdrop" aria-hidden="true"></div>
+        <div class="glass-card">
+          <img class="glass-photo" src="./maoboli.jpg" alt="" aria-hidden="true" />
+          <div class="quote-text" aria-live="polite"></div>
+          <div class="quote-hint">即将进入系列照片廊…</div>
+        </div>
+      </section>
+
+      <!-- 系列照片廊 -->
+      <section id="photo-gallery-view" class="view" aria-hidden="true">
+        <header class="series-header">
+          <div class="series-title">
+            <div class="series-title-cn" id="series-title-cn"></div>
+            <div class="series-title-en" id="series-title-en"></div>
+          </div>
+          <div class="series-quote-text" id="series-understanding"></div>
+        </header>
+
+        <main class="photo-grid" aria-label="照片廊"></main>
+
+        <footer class="series-footer">
+          <button class="back-button" type="button" onclick="navigateTo('gallery-overview-view')">
+            返回
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
